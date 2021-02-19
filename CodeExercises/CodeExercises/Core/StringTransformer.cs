@@ -14,6 +14,7 @@ namespace CodeExerciese.Core
                 //Return the data if there are no rotations to apply or it is empty/null
                 if (timesToRotate.Equals(0) || string.IsNullOrEmpty(data))
                     return data;
+                timesToRotate = AdjustTimesToRotate(data.Length, timesToRotate);
                 //Using stringbuilder ends up being a less expensive operation than directly appending to a string
                 var stringBuilder = new StringBuilder();
                 //Append the end substring of the provided data to the new stringBuilder object
