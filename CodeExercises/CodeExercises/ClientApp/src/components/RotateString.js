@@ -28,7 +28,7 @@ export class RotateString extends Component {
         else {
             this.setState({ timesToRotateError: "" });
         }
-        const url = `https://localhost:44333/api/rotateString/${data}/timesToRotate/${timesToRotate}`;
+        const url = `https://codingexercises.herokuapp.com/api/rotateString/${data}/timesToRotate/${timesToRotate}`;
         axios
             .get(url)
             .then(response => {

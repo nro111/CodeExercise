@@ -31,7 +31,7 @@ export class ArrayCompare extends Component {
         else {
             this.setState({ textComparisonError: "" });
         }
-        const url = `https://localhost:44333/api/getAboveAndBelow/${data}/comparisonValue/${comparisonValue}`;
+        const url = `https://codingexercises.herokuapp.com/api/getAboveAndBelow/${data}/comparisonValue/${comparisonValue}`;
         axios
             .get(url)
             .then(response => {
